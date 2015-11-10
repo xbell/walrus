@@ -1,0 +1,8 @@
+<p>Sections</p>
+
+
+  <ul>
+    <% @sections.each do |s|%>
+    <li><%=link_to s.name, show_a_section_path(s.id)%></li>
+    <%end%>
+  </ul>

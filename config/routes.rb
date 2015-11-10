@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
 
-  get "/", to: "home#index"
-  
+
+  get "/sections",     to: "sections#index", as: :all_sections
+  get "/sections/:id", to: "sections#show",  as: :show_a_section
+  post "/sections",    to: "sections#get_it_done"
+
+  get "/", to: "sections#index"
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
