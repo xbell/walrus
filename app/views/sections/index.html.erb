@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<p>Sections</p>
-
+<p>Menu Categories</p>
 
   <ul>
     <% @sections.each do |s|%>
     <li><%=link_to s.name, show_a_section_path(s.id)%></li>
     <%end%>
   </ul>
-=======
-<p>Menu Categories</p>
-
-
-<ul>
-  <% @sections.each do |section| %>
-  <li>
-    <%= link_to section.name, section_path(section.id) %>
-  </li>
-  <% end %>
-</ul>
->>>>>>> 56b405280c4a3e0ca9b6e95757f45d0aee3d8b4f
