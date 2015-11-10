@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get "/sections/:id", to: "sections#show", as: :section
   get "/sections", to: "sections#index", as: :sections
+  get "/", to: "sections#index"
   post "/sections", to: "sections#create"
   # delete "/sections/:id", to: "sections#destroy"
 
