@@ -1,0 +1,10 @@
+<p>Menu Categories</p>
+
+
+<ul>
+  <% @sections.each do |section| %>
+  <li>
+    <%= link_to section.name, section_path(section.id) %>
+  </li>
+  <% end %>
+</ul>
