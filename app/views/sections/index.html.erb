@@ -8,3 +8,29 @@
   </li>
   <% end %>
 </ul>
+
+<form action="/sections" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <div>
+    <h4>
+      <label for="name-input">Create A Menu Section</label>
+    </h4>
+    <input type="text" id = "name-input" name="section_name" />
+  </div>
+  <div>
+    <input type="submit" />
+  </div>
+</form>
+
+<!-- <form action="/sections" method="DELETE">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <div>
+    <h4>
+      <label for="name-input">Delete A Menu Section</label>
+    </h4>
+    <input type="text" id = "name-input" name="section_name" />
+  </div>
+  <div>
+    <input type="submit" />
+  </div>
+</form> -->

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   get "/sections/:id", to: "sections#show", as: :section
-  get "/", to: "sections#index", as: :sections
+  get "/sections", to: "sections#index", as: :sections
+  post "/sections", to: "sections#create"
+  # delete "/sections/:id", to: "sections#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
