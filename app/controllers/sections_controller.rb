@@ -11,12 +11,6 @@ class SectionsController < ApplicationController
   def create
     @section = Section.new
     @section.name = params[:section_name]
-  end
-
-  def get_it_done
-    @section          = Section.new
-    @section.name     = params[:task_name]
-    @section.complete = params[:task_complete]
     @section.save
     redirect_to "/sections"
   end
