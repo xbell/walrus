@@ -1,3 +1,8 @@
-<p>
-  Hello
-</p>
+<p>Sections</p>
+
+
+  <ul>
+    <%Section.all.each do |name|%>
+    <li><%=name[:name]%></li>
+    <%end%>
+  </ul>
