@@ -20,6 +20,8 @@ class SectionsController < ApplicationController
     end
   end
 
+
+
   # def destroy
   #   @section.name = params[:section_name]
   #   raise

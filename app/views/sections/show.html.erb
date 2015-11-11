@@ -1,3 +1,42 @@
 <h1><%= @section.name %></h1>
 
-<%= link_to "<-", sections_path %>
+<% if @item %>
+  <ul>
+    <% @item.errors.each do |column, error| %>
+      <li><%= column %> <%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/sections/:id" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <div>
+    <h4>
+      <label for="name-input">Create A Menu Item</label>
+    </h4>
+    <input type="text" id = "name-input" name="item_name" />
+  </div>
+  <div>
+    <h4>
+      <label for="description-input">Item Description</label>
+    </h4>
+    <input type="text" id = "description-input" name="item_description" />
+  </div>
+  <div>
+    <h4>
+      <label for="description-input">Price</label>
+    </h4>
+    <input type="text" id = "description-input" name="item_price" />
+  </div>
+  <div>
+    <h4>
+      <label for="description-input">Note</label>
+    </h4>
+    <input type="text" id = "description-input" name="item_note" />
+  </div>
+  <div>
+    <input type="submit" />
+  </div>
+</form>
+
+<%= link_to "Home", sections_path %>
