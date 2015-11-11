@@ -10,7 +10,7 @@ class SectionsController < ApplicationController
   end
 
   def create
-    @item = Item.new
+    @item = MenuItem.new
     @item.name = params[:item_name]
     @item.description = params[:item_description]
     @item.price = params[:item_price]
