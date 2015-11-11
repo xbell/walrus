@@ -4,10 +4,10 @@ class MenuItemsController < ApplicationController
     @sections = Section.all
   end
 
-  def show
-    @items = MenuItem.all
-    @section = Section.find(params[:id])
-  end
+  # def show
+  #   @items = MenuItem.all
+  #   @section = Section.find(params[:id])
+  # end
 
   def create
     @item = MenuItem.new
@@ -17,10 +17,10 @@ class MenuItemsController < ApplicationController
     @item.note = params[:item_note]
     @item.menu_section_id = params[:id]
     if @item.save
-      redirect_to "/sections"
+      redirect_to "/sections/#{params[:id]}"
     else
       @items = MenuItem.all
-      render :section['id']
+      render :sections/:id
     end
   end
 
