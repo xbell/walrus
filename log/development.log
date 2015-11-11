@@ -1,6 +1,4 @@
 
-
-<<<<<<< HEAD
 Started GET "/" for ::1 at 2015-11-10 13:10:30 -0800
   [1m[36mActiveRecord::SchemaMigration Load (9.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by HomeController#index as HTML
@@ -378,8 +376,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -408,8 +406,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -438,8 +436,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -468,8 +466,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -498,8 +496,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -528,8 +526,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -558,8 +556,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -588,8 +586,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -618,8 +616,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -648,8 +646,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -678,8 +676,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@index.each do |section|%>
     6:     <li>
@@ -708,8 +706,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <%@sections.each do |section|%>
     6:     <li>
@@ -738,8 +736,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4: <ul>
     5:   <% @sections.each do |section| %>
     6:   <li>
@@ -768,8 +766,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4: <ul>
     5:   <% @sections.each do |section| %>
     6:   <li>
@@ -798,8 +796,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4: <ul>
     5:   <% @sections.each do |section| %>
     6:   <li>
@@ -852,7 +850,7 @@ Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -879,7 +877,7 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -906,7 +904,7 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -933,7 +931,7 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -958,8 +956,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4: <ul>
     5:   <% @sections.each do |section| %>
     6:   <li>
@@ -1402,8 +1400,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4: <ul>
     5:   <% @sections.each do |section| %>
     6:   <li>
@@ -5740,8 +5738,8 @@ Processing by HomeController#index as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    2: 
-    3: 
+    2:
+    3:
     4:   <ul>
     5:     <% @section.each do |name|%>
     6:     <li><%=link_to name.name, show_a_section_path(name[:id])%></li>
@@ -7738,7 +7736,7 @@ Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -7765,7 +7763,7 @@ Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -7792,7 +7790,7 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -7819,7 +7817,7 @@ Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -7846,7 +7844,7 @@ Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -7873,7 +7871,7 @@ Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -7900,7 +7898,7 @@ Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -7927,7 +7925,7 @@ Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -7976,7 +7974,7 @@ Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -8003,7 +8001,7 @@ Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -8052,7 +8050,7 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -8079,7 +8077,7 @@ Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -8106,7 +8104,7 @@ Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162366241280'
 
@@ -8133,7 +8131,7 @@ Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
     1: <h1><%= @section.name %></h1>
-    2: 
+    2:
     3: <%= link_to "<--", sections_path %>
   app/views/home/show.html.erb:1:in `_app_views_home_show_html_erb__3959603529944400938_70162384782200'
 
@@ -12195,6 +12193,16 @@ Migrating to AddDescriptionToSection (20151111001157)
   [1m[36m (31.4ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDescriptionToSection (20151111000758)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (20.6ms)[0m  [1mALTER TABLE "sections" ADD "description" character varying[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151111000758"]]
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+>>>>>>> 5287ca6cc14542209b29f0e708c79c214c52fbf3
 FROM pg_constraint c
 JOIN pg_class t1 ON c.conrelid = t1.oid
 JOIN pg_class t2 ON c.confrelid = t2.oid
