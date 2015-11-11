@@ -8,13 +8,13 @@
   <% end %>
 </ul>
 
-<!-- <% if @section %>
+<% if @section %>
   <ul>
     <% @section.errors.each do |column, error| %>
       <li><%= column %> <%= error %></li>
     <% end %>
   </ul>
-<% end %> -->
+<% end %>
 
 <form action="/sections" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
