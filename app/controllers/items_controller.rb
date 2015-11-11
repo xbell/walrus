@@ -5,7 +5,7 @@ class SectionsController < ApplicationController
   end
 
   def show
-    @item = Item.all
+    # @item = Item.all
     @section = Section.find(params[:id])
   end
 
@@ -14,7 +14,8 @@ class SectionsController < ApplicationController
     @item.name = params[:item_name]
     @item.description = params[:item_description]
     @item.price = params[:item_price]
-    @item.notes = params[:item_note]
+    @item.note = params[:item_note]
+    @item.menu_section_id = @section
     if @item.save
       redirect_to "/sections/:id"
     else

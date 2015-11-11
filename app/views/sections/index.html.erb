@@ -5,8 +5,10 @@
   <li>
     <%= link_to section.name, section_path(section.id) %>
   </li>
+    (<%=section.description %>)
   <% end %>
 </ul>
+
 
 <% if @section %>
   <ul>
