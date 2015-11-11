@@ -14,7 +14,7 @@ class SectionsController < ApplicationController
     @item.name = params[:item_name]
     @item.description = params[:item_description]
     @item.price = params[:item_price]
-    @item.notes = params[:item_notes]
+    @item.notes = params[:item_note]
     if @item.save
       redirect_to "/sections/:id"
     else
@@ -22,7 +22,6 @@ class SectionsController < ApplicationController
       render :section[:id]
     end
   end
-
 
 
 end
