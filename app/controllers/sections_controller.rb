@@ -8,11 +8,17 @@ class SectionsController < ApplicationController
     @section = Section.find(params[:id])
   end
 
-  def create
+  def create()
     @section = Section.new
     @section.name = params[:section_name]
-    @section.save
-    redirect_to "/sections"
+    @section.description = params[:section_description]
+    if params[:section_name].blank?
+      "Entry cannot be blank."
+      redirect_to "/sections"
+    else
+      @section.save
+      redirect_to "/sections"
+    end
   end
 
   # def destroy
