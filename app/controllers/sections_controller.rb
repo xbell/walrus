@@ -12,12 +12,11 @@ class SectionsController < ApplicationController
     @section = Section.new
     @section.name = params[:section_name]
     @section.description = params[:section_description]
-    if params[:section_name].blank?
-      "Entry cannot be blank."
+    if @section.save
       redirect_to "/sections"
     else
-      @section.save
-      redirect_to "/sections"
+      @sections = Section.all
+      render :index
     end
   end
 
