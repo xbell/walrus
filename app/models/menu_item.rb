@@ -1,4 +1,4 @@
-class Item < ActiveRecord::Base
+class MenuItem < ActiveRecord::Base
   validates :name, presence: true
   validates :price, presence: true
 end

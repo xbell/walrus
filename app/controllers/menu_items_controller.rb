@@ -1,11 +1,11 @@
-class SectionsController < ApplicationController
+class MenuItemsController < ApplicationController
 
   def index
     @sections = Section.all
   end
 
   def show
-    # @item = Item.all
+    @items = MenuItem.all
     @section = Section.find(params[:id])
   end
 
@@ -15,12 +15,12 @@ class SectionsController < ApplicationController
     @item.description = params[:item_description]
     @item.price = params[:item_price]
     @item.note = params[:item_note]
-    @item.menu_section_id = @section
+    @item.menu_section_id = params[:id]
     if @item.save
-      redirect_to "/sections/:id"
+      redirect_to "/sections"
     else
-      @items = Item.all
-      render :section[:id]
+      @items = MenuItem.all
+      render :section['id']
     end
   end
 

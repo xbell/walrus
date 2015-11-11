@@ -33,5 +33,14 @@ ActiveRecord::Schema.define(version: 20151111214245) do
     t.string   "description"
   end
 
+  create_table "walrus", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "price"
+    t.text     "note"
+    t.integer  "menu_section_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
 end
