@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Walrus</title>
-  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cantarell:400italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,12 +11,15 @@
   <div class= "container">
     <%= image_tag ("anchor"), class: "anchor" %>
       <div class= "header">
-      <%= image_tag ("logo"), class: "logo" %>
-      <%= link_to 'Shop', "/shop"%>
-      <%= link_to 'Drinks', "/drinks"%>
+        <%= image_tag ("logo"), class: "logo" %>
+        <div class= "links">
+          <%= link_to 'Menu', "/index"%>
+          <%= link_to 'Photos', "/photos"%>
+          <%= link_to 'About', "/about"%>
+          <%= link_to 'Contact', "/contact"%>
+        </div>
     </div>
   </div>
-
 
 <%= yield %>
 

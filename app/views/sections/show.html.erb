@@ -1,12 +1,17 @@
-<h1><%= @section.name %></h1>
 
-<ul>
-  <% @items.each do |item| %>
-    <li>
-    <%=item.name%>, <%=item.description%> <%=item.price%> <%=item.note%>
-    </li>
-  <% end %>
-</ul>
+<div class = "menubody">
+
+    <h2><%= @section.name %></h2>
+
+    <ul>
+      <% @items.each do |item| %>
+        <li>
+        <%=item.name%>, <%=item.description%> <%=item.price%> <%=item.note%>
+        </li>
+      <% end %>
+    </ul>
+
+</div>
 
 <% if @item %>
   <ul>
