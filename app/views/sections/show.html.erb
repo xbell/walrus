@@ -6,23 +6,24 @@
     <ul>
       <% @items.each do |item| %>
         <li>
-        <%=item.name%>, <%=item.description%> <%=item.price%> <%=item.note%>
+        <b><%=item.name%></b>, <%=item.description%> <%=item.price%> <%=item.note%>
         </li>
       <% end %>
     </ul>
 
+    <h4>20% Service Charge**</h4>
+    <p class="notes">
+      *Consuming raw, undercooked, or unpasteurized foods may increase your risk of foodborne illness. <br>
+      Menu items may contain nuts and other allergens.
+      Please let us know if you are allergic to anything.
+    </p>
+    <p class ="notes">
+      ** 100% of this charge is paid to employees. 55% of this charge is paid to employees “directly serving the customer”.
+    </p>
+    <h5>Thank you for dining at the Walrus and the Carpenter.</h5>
+
 </div>
 
-<h4>20% Service Charge**</h4>
-<p class="notes">
-  *Consuming raw, undercooked, or unpasteurized foods may increase your risk of foodborne illness. <br>
-  Menu items may contain nuts and other allergens.
-  Please let us know if you are allergic to anything.
-</p>
-<p class ="notes">
-  ** 100% of this charge is paid to employees. 55% of this charge is paid to employees “directly serving the customer”.
-</p>
-<h5>Thank you for dining at the Walrus and the Carpenter.</h5>
 
 <% if @item %>
   <ul>

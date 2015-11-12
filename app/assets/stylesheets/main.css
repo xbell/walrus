@@ -38,6 +38,11 @@
   color: black;
 }
 
+.header p{
+  display: inline-block;
+  font-family: 'Cantarell', sans-serif;
+}
+
 .menubody  {
   height: auto;
   width: 800px;
@@ -45,7 +50,7 @@
   margin: 0 300px 0 250px;
 }
 
-.menubody h2 {
+.menubody h1 {
   text-align: center;
   padding: 0 100px 0 0;
 }
@@ -58,7 +63,17 @@
   list-style: none;
 }
 
+.menubody .item {
+  font-weight: bolder;
+}
 
+.menubody .description {
+  font-style: italic;
+}
+
+.menubody .price {
+  font-weight: bolder;
+}
 
 .menubody .center {
   padding: 0 100px 0 200px;
