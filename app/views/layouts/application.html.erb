@@ -8,8 +8,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class= "container">
+    <%= image_tag ("anchor"), class: "anchor" %>
+      <div class= "header">
+      <%= image_tag ("logo"), class: "logo" %>
+      <%= link_to 'Shop', "/shop"%>
+      <%= link_to 'Drinks', "/drinks"%>
+    </div>
+  </div>
+
 
 <%= yield %>
+
+    <div class= "footer">
+      <%= image_tag ("walrus"), class: "walrus" %>
+    </div>
 
 </body>
 </html>
