@@ -1,0 +1,53 @@
+
+.container {
+  display: inline-block;
+  width: 100%;
+  height: 300px;
+}
+
+.container .anchor {
+  display: inline-block;
+  float: left;
+}
+
+.header {
+  display: inline-block;
+  width: 80%;
+  padding: 0 0 0 150px;
+
+
+
+}
+
+.header .logo {
+  display: inline-block;
+  float: left;
+  padding: 0 0 0 180px;
+}
+
+.header a {
+  display: inline-block;
+  font-family: 'Arimo', sans-serif;
+  float: right;
+  padding: 50px 150px 100px 100px;
+}
+
+.menubody h2 {
+  text-align: center;
+  padding: 0 100px 0 0;
+}
+.menubody ul{
+  list-style: none;
+}
+
+.menubody li{
+  list-style: none;
+}
+
+.menubody  {
+  padding: 0 500px 0 500px;
+}
+
+.footer {
+  text-align: center;
+}
