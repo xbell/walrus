@@ -1,15 +1,5 @@
 class MenuItemsController < ApplicationController
 
-  # def index
-  #   @sections = Section.all
-  #   @items = MenuItem.all
-  # end
-  #
-  # def show
-  #   @items = MenuItem.where(menu_section_id: params[:id])
-  #   @section = Section.find(params[:id])
-  # end
-
   def create
     @item = MenuItem.new
     @item.name = params[:item_name]
@@ -20,8 +10,9 @@ class MenuItemsController < ApplicationController
     if @item.save
       redirect_to "/sections/#{params[:id]}"
     else
-      @items = MenuItem.all
-      render :show
+      @section = Section.find(params[:id])
+      @items = MenuItem.where(menu_section_id: params[:id])
+      render "sections/show"
     end
   end
 
