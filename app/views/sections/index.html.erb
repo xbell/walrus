@@ -5,10 +5,18 @@
   <li>
     <%= link_to section.name, section_path(section.id) %>
   </li>
-    (<%=section.description %>)
+    <%=section.description %>
+  <ul>
+    <% @items.each do |item| %>
+      <% if item.menu_section_id == section.id %>
+        <li>
+          <%=item.name%>, <%=item.description%> <%=item.price%> <%=item.note%>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
   <% end %>
 </ul>
-
 
 <% if @section %>
   <ul>

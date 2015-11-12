@@ -1,11 +1,12 @@
 class MenuItemsController < ApplicationController
 
-  def index
-    @sections = Section.all
-  end
-
-  # def show
+  # def index
+  #   @sections = Section.all
   #   @items = MenuItem.all
+  # end
+  #
+  # def show
+  #   @items = MenuItem.where(menu_section_id: params[:id])
   #   @section = Section.find(params[:id])
   # end
 
@@ -20,7 +21,7 @@ class MenuItemsController < ApplicationController
       redirect_to "/sections/#{params[:id]}"
     else
       @items = MenuItem.all
-      render :sections/:id
+      render :show
     end
   end
 

@@ -2,6 +2,7 @@ class SectionsController < ApplicationController
 
   def index
     @sections = Section.all
+    @items = MenuItem.all
   end
 
   def show
@@ -17,6 +18,7 @@ class SectionsController < ApplicationController
       redirect_to "/sections"
     else
       @sections = Section.all
+      @items = MenuItem.all
       render :index
     end
   end
