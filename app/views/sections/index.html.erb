@@ -34,6 +34,50 @@
           <% end %>
         </ul>
       <% end %>
+<<<<<<< HEAD
+    <% end %>
+  </ul>
+  <% end %>
+</ul>
+
+<h4>20% Service Charge**</h4>
+<p class="notes">
+  *Consuming raw, undercooked, or unpasteurized foods may increase your risk of foodborne illness. <br>
+  Menu items may contain nuts and other allergens.
+  Please let us know if you are allergic to anything.
+</p>
+<p class ="notes">
+  ** 100% of this charge is paid to employees. 55% of this charge is paid to employees “directly serving the customer”.
+</p>
+<h5>Thank you for dining at the Walrus and the Carpenter.</h5>
+
+<% if @section %>
+  <ul>
+    <% @section.errors.each do |column, error| %>
+      <li><%= column %> <%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/sections" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <div>
+    <h4>
+      <label for="name-input">Create A Menu Section</label>
+    </h4>
+    <input type="text" id = "name-input" name="section_name" />
+  </div>
+  <div>
+    <h4>
+      <label for="description-input">Section Description(optional)</label>
+    </h4>
+    <input type="text" id = "description-input" name="section_description" />
+  </div>
+  <div>
+    <input type="submit" />
+  </div>
+</form>
+=======
 
       <form action="/sections" method="POST">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
@@ -55,6 +99,7 @@
       </form>
 
 </div>
+>>>>>>> 34bef0ca5a1c5e5bb912655a050f26e64b7dd008
 
 <!-- <form action="/sections" method="DELETE">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
