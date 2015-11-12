@@ -6,7 +6,7 @@
     <ul>
       <% @items.each do |item| %>
         <li>
-        <b><%=item.name%></b>, <%=item.description%> <%=item.price%> <%=item.note%>
+          <span class= "item"><%=item.name%></span>, <span class = "description"><%=item.description%></span>, <span class = "price">(<%=item.price%>)</span> <%=item.note%>
         </li>
       <% end %>
     </ul>
@@ -20,48 +20,54 @@
     <p class ="notes">
       ** 100% of this charge is paid to employees. 55% of this charge is paid to employees “directly serving the customer”.
     </p>
-    <h5>Thank you for dining at the Walrus and the Carpenter.</h5>
+    <h4>Thank you for dining at the Walrus and the Carpenter.</h4>
 
 </div>
 
 
-<% if @item %>
-  <ul>
-    <% @item.errors.each do |column, error| %>
-      <li><%= column %> <%= error %></li>
+    <% if @item %>
+      <ul>
+        <% @item.errors.each do |column, error| %>
+          <li><%= column %> <%= error %></li>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
-<% end %>
 
-<form action="/sections/<%=@section.id%>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-  <div>
-    <h4>
-      <label for="name-input">Create A Menu Item</label>
-    </h4>
-    <input type="text" id = "name-input" name="item_name" />
-  </div>
-  <div>
-    <h4>
-      <label for="description-input">Item Description</label>
-    </h4>
-    <input type="text" id = "description-input" name="item_description" />
-  </div>
-  <div>
-    <h4>
-      <label for="description-input">Price</label>
-    </h4>
-    <input type="text" id = "description-input" name="item_price" />
-  </div>
-  <div>
-    <h4>
-      <label for="description-input">Note</label>
-    </h4>
-    <input type="text" id = "description-input" name="item_note" />
-  </div>
-  <div>
-    <input type="submit" />
-  </div>
-</form>
 
-<%= link_to "Home", sections_path %>
+  <div class = "box">
+
+    <form action="/sections/<%=@section.id%>" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+      <div>
+        <h4>
+          <label for="name-input">Create A Menu Item</label>
+        </h4>
+        <input type="text" id = "name-input" name="item_name" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Item Description</label>
+        </h4>
+        <input type="text" id = "description-input" name="item_description" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Price</label>
+        </h4>
+        <input type="text" id = "description-input" name="item_price" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Note</label>
+        </h4>
+        <input type="text" id = "description-input" name="item_note" />
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+  </div>
+
+  <div class = "home">
+    <%= link_to "Home", sections_path %>
+  </div>

@@ -52,11 +52,15 @@
 
 .menubody h1 {
   text-align: center;
-  padding: 0 100px 0 0;
+}
+
+.menubody h2 {
+  text-align: center;
 }
 
 .menubody ul{
   list-style: none;
+  text-align: center;
 }
 
 .menubody li{
@@ -76,7 +80,36 @@
 }
 
 .menubody .center {
-  padding: 0 100px 0 200px;
+  text-align: center;
+  padding: 0 50px 0 0;
+}
+
+.menubody .notes {
+  text-align: center;
+}
+
+.menubody h4 {
+  text-align: center;
+}
+
+.box {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  margin: 5px 0 0 550px;
+  border: 2px dashed #95b9e3;
+}
+
+.home {
+  display: inline-block;
+  padding: 0 0 0 15px;
+}
+
+.home a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #95b9e3;
+
 }
 
 .footer {

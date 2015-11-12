@@ -12,7 +12,7 @@ class SectionsController < ApplicationController
 
   def create
     @section = Section.new
-    @section.name = params[:section_name]
+    @section.name = params[:section_name].upcase
     @section.description = params[:section_description]
     if @section.save
       redirect_to "/sections"

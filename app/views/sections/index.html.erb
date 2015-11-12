@@ -14,7 +14,7 @@
           <% @items.each do |item| %>
             <% if item.menu_section_id == section.id %>
               <li>
-                <span class= "item"><%=item.name%></span>, <span class = "description"><%=item.description%></span>, <span class = "price"><%=item.price%></span> <%=item.note%>
+                <span class= "item"><%=item.name%></span>, <span class = "description"><%=item.description%></span>, <span class = "price">(<%=item.price%>)</span> <%=item.note%>
               </li>
             <% end %>
           <% end %>
@@ -31,49 +31,50 @@
     <p class ="notes">
       ** 100% of this charge is paid to employees. 55% of this charge is paid to employees “directly serving the customer”.
     </p>
-    <h5>Thank you for dining at the Walrus and the Carpenter.</h5>
+    <h4>Thank you for dining at the Walrus and the Carpenter.</h4>
 </div>
 
 <div class = "form">
 
-      <% if @section %>
-        <ul>
-          <% @section.errors.each do |column, error| %>
-            <li><%= column %> <%= error %></li>
-          <% end %>
-        </ul>
+  <% if @section %>
+    <ul>
+      <% @section.errors.each do |column, error| %>
+        <li><%= column %> <%= error %></li>
       <% end %>
+    </ul>
+  <% end %>
 
+  <% if @section %>
+    <ul>
+      <% @section.errors.each do |column, error| %>
+        <li><%= column %> <%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
+  <div class = "box">
 
-
-<% if @section %>
-  <ul>
-    <% @section.errors.each do |column, error| %>
-      <li><%= column %> <%= error %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-<form action="/sections" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-  <div>
-    <h4>
-      <label for="name-input">Create A Menu Section</label>
-    </h4>
-    <input type="text" id = "name-input" name="section_name" />
+    <form action="/sections" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+      <div>
+        <h4>
+          <label for="name-input">Create A Menu Section</label>
+        </h4>
+        <input type="text" id = "name-input" name="section_name" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Section Description(optional)</label>
+        </h4>
+        <input type="text" id = "description-input" name="section_description" />
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+    =======
   </div>
-  <div>
-    <h4>
-      <label for="description-input">Section Description(optional)</label>
-    </h4>
-    <input type="text" id = "description-input" name="section_description" />
-  </div>
-  <div>
-    <input type="submit" />
-  </div>
-</form>
-=======
+
 
 
 </div>

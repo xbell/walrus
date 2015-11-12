@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/", to: "sections#index"
   post "/sections", to: "sections#create"
   post "/sections/:id", to: "menu_items#create"
+  
   # delete "/sections/:id", to: "sections#destroy"
 
 
