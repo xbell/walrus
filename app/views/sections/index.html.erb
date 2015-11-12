@@ -1,49 +1,70 @@
-<p>Menu Categories</p>
+<div class= "container">
+  <%= image_tag ("anchor"), class: "anchor" %>
+    <div class= "header">
+    <%= image_tag ("logo"), class: "logo" %>
+    <%= link_to 'Shop', "/shop"%>
+    <%= link_to 'Drinks', "/drinks"%>
+  </div>
+</div>
 
-<ul>
-  <% @sections.each do |section| %>
-  <li>
-    <%= link_to section.name, section_path(section.id) %>
-  </li>
-    <%=section.description %>
-  <ul>
-    <% @items.each do |item| %>
-      <% if item.menu_section_id == section.id %>
+
+
+
+<div class = "menubody">
+
+      <h2>Food Menu Categories</h2>
+
+      <ul>
+        <% @sections.each do |section| %>
         <li>
-          <%=item.name%>, <%=item.description%> <%=item.price%> <%=item.note%>
+          <%= link_to section.name, section_path(section.id) %>
         </li>
+          <%=section.description %>
+        <ul>
+          <% @items.each do |item| %>
+            <% if item.menu_section_id == section.id %>
+              <li>
+                <%=item.name%>, <%=item.description%> <%=item.price%> <%=item.note%>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+        <% end %>
+      </ul>
+
+</div>
+
+<div class = "form">
+
+
+      <% if @section %>
+        <ul>
+          <% @section.errors.each do |column, error| %>
+            <li><%= column %> <%= error %></li>
+          <% end %>
+        </ul>
       <% end %>
-    <% end %>
-  </ul>
-  <% end %>
-</ul>
 
-<% if @section %>
-  <ul>
-    <% @section.errors.each do |column, error| %>
-      <li><%= column %> <%= error %></li>
-    <% end %>
-  </ul>
-<% end %>
+      <form action="/sections" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+        <div>
+          <h4>
+            <label for="name-input">Create A Menu Section</label>
+          </h4>
+          <input type="text" id = "name-input" name="section_name" />
+        </div>
+        <div>
+          <h4>
+            <label for="description-input">Section Description(optional)</label>
+          </h4>
+          <input type="text" id = "description-input" name="section_description" />
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+      </form>
 
-<form action="/sections" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-  <div>
-    <h4>
-      <label for="name-input">Create A Menu Section</label>
-    </h4>
-    <input type="text" id = "name-input" name="section_name" />
-  </div>
-  <div>
-    <h4>
-      <label for="description-input">Section Description(optional)</label>
-    </h4>
-    <input type="text" id = "description-input" name="section_description" />
-  </div>
-  <div>
-    <input type="submit" />
-  </div>
-</form>
+</div>
 
 <!-- <form action="/sections" method="DELETE">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
