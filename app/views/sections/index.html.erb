@@ -19,9 +19,12 @@
             <% end %>
           <% end %>
         </ul>
+        <%= button_to 'Delete Section', @section, :method => :delete %>
         <% end %>
       </ul>
     </div>
+
+
     <h4>20% Service Charge**</h4>
     <p class="notes">
       *Consuming raw, undercooked, or unpasteurized foods may increase your risk of foodborne illness. <br>
@@ -52,7 +55,9 @@
     </ul>
   <% end %>
 
-  <div class = "box">
+<div class = "box">
+
+  <div class = "form">
 
     <form action="/sections" method="POST">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
@@ -72,11 +77,7 @@
         <input type="submit" />
       </div>
     </form>
-    =======
   </div>
-
-
-
 </div>
 
 

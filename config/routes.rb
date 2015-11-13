@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get "/sections", to: "sections#index", as: :sections
   get "/", to: "sections#index"
   post "/sections", to: "sections#create"
-  post "/sections/:id", to: "menu_item#create"
+  post "/sections/:id", to: "menu_items#create"
+  get "/sections", to: "sections#delete_section"
 
 
   # delete "/sections/:id", to: "sections#destroy"
