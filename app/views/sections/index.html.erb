@@ -23,6 +23,8 @@
         <% end %>
       </ul>
     </div>
+
+
     <h4>20% Service Charge**</h4>
     <p class="notes">
       *Consuming raw, undercooked, or unpasteurized foods may increase your risk of foodborne illness. <br>
@@ -35,18 +37,6 @@
     <h4>Thank you for dining at the Walrus and the Carpenter.</h4>
 </div>
 
-<<<<<<< HEAD
-<h4>20% Service Charge**</h4>
-<p class="notes">
-  *Consuming raw, undercooked, or unpasteurized foods may increase your risk of foodborne illness. <br>
-  Menu items may contain nuts and other allergens.
-  Please let us know if you are allergic to anything.
-</p>
-<p class ="notes">
-  ** 100% of this charge is paid to employees. 55% of this charge is paid to employees “directly serving the customer”.
-</p>
-<h5>Thank you for dining at the Walrus and the Carpenter.</h5>
-=======
 <div class = "form">
 
   <% if @section %>
@@ -64,13 +54,11 @@
       <% end %>
     </ul>
   <% end %>
->>>>>>> 9376405cf12dc8752b2d749ea62b4c02de5b0836
 
-  <div class = "box">
+<div class = "box">
 
-<<<<<<< HEAD
-<div class = "form">
-=======
+  <div class = "form">
+
     <form action="/sections" method="POST">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
       <div>
@@ -89,33 +77,8 @@
         <input type="submit" />
       </div>
     </form>
-    =======
   </div>
-
-
->>>>>>> 9376405cf12dc8752b2d749ea62b4c02de5b0836
-
-  <form action="/sections" method="POST">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-    <div>
-      <h4>
-        <label for="name-input">Create A Menu Section</label>
-      </h4>
-      <input type="text" id = "name-input" name="section_name" />
-    </div>
-    <div>
-      <h4>
-        <label for="description-input">Section Description(optional)</label>
-      </h4>
-      <input type="text" id = "description-input" name="section_description" />
-    </div>
-    <div>
-      <input type="submit" />
-    </div>
-  </form>
 </div>
-<<<<<<< HEAD
-=======
 
 
 <!-- <form action="/sections" method="DELETE">
@@ -130,4 +93,3 @@
     <input type="submit" />
   </div>
 </form> -->
->>>>>>> 9376405cf12dc8752b2d749ea62b4c02de5b0836

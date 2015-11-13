@@ -4,15 +4,11 @@ Rails.application.routes.draw do
   get "/sections", to: "sections#index", as: :sections
   get "/", to: "sections#index"
   post "/sections", to: "sections#create"
-<<<<<<< HEAD
   post "/sections/:id", to: "menu_items#create"
   get "/sections", to: "sections#delete_section"
-=======
-  post "/sections/:id", to: "menu_item#create"
 
 
   # delete "/sections/:id", to: "sections#destroy"
->>>>>>> 9376405cf12dc8752b2d749ea62b4c02de5b0836
 
 
   # The priority is based upon order of creation: first created -> highest priority.
