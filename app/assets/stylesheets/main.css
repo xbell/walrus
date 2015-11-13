@@ -13,39 +13,103 @@
 .header {
   display: inline-block;
   width: 80%;
-  padding: 0 0 0 150px;
-
-
+  padding: 0 0 0 0;
 
 }
 
 .header .logo {
   display: inline-block;
   float: left;
-  padding: 0 0 0 180px;
+  padding: 0 0 0 320px;
 }
 
-.header a {
+.header .links {
   display: inline-block;
   font-family: 'Arimo', sans-serif;
   float: right;
-  padding: 50px 150px 100px 100px;
+  padding: 50px 0 0 25px;
+}
+
+.header a {
+  font-family: 'Cantarell', sans-serif;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.header p{
+  display: inline-block;
+  font-family: 'Cantarell', sans-serif;
+}
+
+.menubody  {
+  height: auto;
+  width: 800px;
+  border: 2px solid #95b9e3;
+  margin: 0 300px 0 250px;
+}
+
+.menubody h1 {
+  text-align: center;
 }
 
 .menubody h2 {
   text-align: center;
-  padding: 0 100px 0 0;
 }
+
 .menubody ul{
   list-style: none;
+  text-align: center;
 }
 
 .menubody li{
   list-style: none;
 }
 
-.menubody  {
-  padding: 0 500px 0 500px;
+.menubody .item {
+  font-weight: bolder;
+}
+
+.menubody .description {
+  font-style: italic;
+}
+
+.menubody .price {
+  font-weight: bolder;
+}
+
+.menubody .center {
+  text-align: center;
+  padding: 0 50px 0 0;
+}
+
+.menubody .notes {
+  text-align: center;
+}
+
+.menubody h4 {
+  text-align: center;
+}
+
+.box {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  margin: 5px 0 0 550px;
+  border: 2px dashed #95b9e3;
+}
+
+.home {
+  display: inline-block;
+  padding: 0 0 0 15px;
+}
+
+.home a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #95b9e3;
+
 }
 
 .footer {

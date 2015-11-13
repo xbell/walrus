@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Walrus</title>
-  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cantarell:400italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,12 +11,16 @@
   <div class= "container">
     <%= image_tag ("anchor"), class: "anchor" %>
       <div class= "header">
-      <%= image_tag ("logo"), class: "logo" %>
-      <%= link_to 'Shop', "/shop"%>
-      <%= link_to 'Drinks', "/drinks"%>
-    </div>
+        <%= image_tag ("logo"), class: "logo" %>
+        <div class= "links">
+          <%= link_to 'Menu', sections_path%>
+          <%= link_to 'Photos', "http://www.thewalrusbar.com/photos"%>
+          <%= link_to 'About', "/about"%>
+          <%= link_to 'Contact', "http://www.thewalrusbar.com/contact"%>
+        </div>
+        <p>Open daily, 4pm - 10pm // Oyster Happy Hour, Monday - Thursday, 4pm - 6pm // 4743 Ballard Ave NW Seattle, WA 98107 // (206) 395-9227</p>
+      </div>
   </div>
-
 
 <%= yield %>
 
