@@ -39,10 +39,12 @@
 </div>
 
   <% if @section %>
-    <ul>
+    <ul class = "popup">
       <% @section.errors.each do |column, error| %>
+      <h3>ERROR!</h3>
         <li><%= column %> <%= error %></li>
       <% end %>
+      <p class = "errors">X close error messages</p>
     </ul>
   <% end %>
 
