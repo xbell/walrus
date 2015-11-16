@@ -38,22 +38,11 @@ class SectionsController < ApplicationController
     end
   end
 
-  def delete_section
-    if @section = Section.find_by(params[:section_name])
-      @section.destroy
-      @section.save
+  def delete
+    @section = Section.find_by(params[:section_name])
+    @section.destroy
+    @section.save
       redirect_to "/sections"
-    end
   end
 
 end
-
-
-
-  # def destroy
-  #   @section.name = params[:section_name]
-  #   raise
-  #   @section.destroy
-  #   @section.save
-  #   redirect_to "/sections"
-  # end
