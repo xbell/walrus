@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  get "/sections/edit/:id", to: "sections#edit", as: :edit
   get "/sections/:id", to: "sections#show", as: :section
   get "/sections", to: "sections#index", as: :sections
   get "/", to: "sections#index"
   post "/sections", to: "sections#create"
   post "/sections/:id", to: "menu_item#create"
-  post "/sections", to: "sections#update"
+  get "/sections/edit/:id", to: "sections#edit", as: :edit
   post "/sections/edit/:id", to: "sections#update"
 
   # delete "/sections", to: "sections#delete_section"
