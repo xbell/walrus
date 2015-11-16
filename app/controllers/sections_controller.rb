@@ -23,6 +23,19 @@ class SectionsController < ApplicationController
     end
   end
 
+  def edit
+    @section = Section.find(params[:id])
+  end
+
+  def update
+    @section = Section.find(params[:id])
+    if @section.update_attributes(params[:section])
+      redirect_to edit_path
+    else
+      render "/sections/:id/edit"
+    end
+  end
+
   def delete_section
     if @section = Section.find_by(params[:section_name])
       @section.destroy

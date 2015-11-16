@@ -1,0 +1,35 @@
+<h1>Edit <%= @section.name %></h1>
+
+<% if @section %>
+  <ul>
+    <% @section.errors.each do |column, error| %>
+      <li><%= column %> <%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class = "form">
+
+  <form action="/sections/edit" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+    <div>
+      <h4>
+        <label for="name-input">Edit Menu Section</label>
+      </h4>
+      <input type="text" id = "name-input" name="section_name" value="<%= @section.name %>" />
+    </div>
+    <div>
+      <h4>
+        <label for="description-input">Edit Section Description(optional)</label>
+      </h4>
+      <input type="text" id = "description-input" name="section_description" value="<%= @section.description %>" />
+    </div>
+    <div>
+      <input type="submit" />
+    </div>
+  </form>
+</div>
+
+<div class = "home">
+  <%= link_to "Home", sections_path %>
+</div>

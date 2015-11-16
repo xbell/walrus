@@ -7,7 +7,7 @@
       <ul>
         <% @sections.each do |section| %>
         <li>
-          <h2><%= link_to section.name, section_path(section.id)%></h2>
+          <h2><%= link_to section.name, section %></h2>
         </li>
           <%=section.description %>
         <ul>
@@ -19,7 +19,8 @@
             <% end %>
           <% end %>
         </ul>
-        <%= button_to 'Delete Section', @section, :method => :delete %>
+        <%= link_to "Edit Section", edit_path(section) %>
+        <!-- <%= button_to 'Delete Section', @section, :method => :delete %> -->
         <% end %>
       </ul>
     </div>
@@ -36,16 +37,6 @@
     </p>
     <h4>Thank you for dining at the Walrus and the Carpenter.</h4>
 </div>
-
-<div class = "form">
-
-  <% if @section %>
-    <ul>
-      <% @section.errors.each do |column, error| %>
-        <li><%= column %> <%= error %></li>
-      <% end %>
-    </ul>
-  <% end %>
 
   <% if @section %>
     <ul>
