@@ -34,7 +34,7 @@ class SectionsController < ApplicationController
     if @section.save
       redirect_to section_path(@section)
     else
-      render "/sections/:id/edit"
+      render "/sections/edit"
     end
   end
 
