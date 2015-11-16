@@ -29,8 +29,10 @@ class SectionsController < ApplicationController
 
   def update
     @section = Section.find(params[:id])
-    if @section.update_attributes(params[:section])
-      redirect_to edit_path
+    @section.name = params[:section_name].upcase
+    @section.description = params[:section_description]
+    if @section.save
+      redirect_to section_path(@section)
     else
       render "/sections/:id/edit"
     end
