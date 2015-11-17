@@ -28,7 +28,7 @@
            </ul>
           </div>
         <%= link_to "Edit Section", edit_path(section) %>
-        <%= link_to 'Delete Section', delete_path(section) %>
+        <%= link_to "Delete Section", delete_path(section), method: :get, data: { confirm: "Delete entire menu section?" } %>
         <% end %>
       </ul>
     </div>
