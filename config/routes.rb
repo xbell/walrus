@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   post "/sections/:id", to: "menu_item#create"
   get "/sections/edit/:id", to: "sections#edit", as: :edit
   post "/sections/edit/:id", to: "sections#update"
-
-  # delete "/sections", to: "sections#delete_section"
-
-
+  get "/sections/delete/:id", to: "sections#delete", as: :delete
+  get "/menu-items/edit/:id", to: "menu_item#edit", as: :edit_item
+  post "/menu-items/edit/:id", to: "menu_item#update"
+  get "/menu-items/delete/:id", to: "menu_item#delete", as: :delete_item
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

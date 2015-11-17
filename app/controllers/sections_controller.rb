@@ -34,26 +34,20 @@ class SectionsController < ApplicationController
     if @section.save
       redirect_to section_path(@section)
     else
-      render "/sections/:id/edit"
+      render "/sections/edit"
     end
   end
 
-  def delete_section
-    if @section = Section.find_by(params[:section_name])
-      @section.destroy
-      @section.save
-      redirect_to "/sections"
+  def delete
+    @items = MenuItem.where(menu_section_id: params[:id])
+    @items.each do |item|
+      item.destroy
+      item.save 
     end
+    @section = Section.find(params[:id])
+    @section.destroy
+    @section.save
+      redirect_to "/sections"
   end
 
 end
-
-
-
-  # def destroy
-  #   @section.name = params[:section_name]
-  #   raise
-  #   @section.destroy
-  #   @section.save
-  #   redirect_to "/sections"
-  # end
