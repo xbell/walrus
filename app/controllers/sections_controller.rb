@@ -42,7 +42,7 @@ class SectionsController < ApplicationController
     @items = MenuItem.where(menu_section_id: params[:id])
     @items.each do |item|
       item.destroy
-      item.save
+      item.save 
     end
     @section = Section.find(params[:id])
     @section.destroy
