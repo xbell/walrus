@@ -39,7 +39,12 @@ class SectionsController < ApplicationController
   end
 
   def delete
-    @section = Section.find_by(params[:section_name])
+    @items = MenuItem.where(menu_section_id: params[:id])
+    @items.each do |item|
+      item.destroy
+      item.save
+    end
+    @section = Section.find(params[:id])
     @section.destroy
     @section.save
       redirect_to "/sections"
