@@ -4,16 +4,13 @@ $(document).ready(function() {
 $(".errors").click(function() {
    $(".popup").hide() ; })
 
-$(".toggle").click(function() {
-   $(".hide").toggle(); })
 
-//
-// $(".toggle").click(function() {
-//   $(".hide").show() ;
-// })
+$(".toggle").click(function() {
+  $(".toggle").toggle().css("color", "red");
+  $(".hide").toggle();
+ })
+
+
 
 
 });
-
-//
-// if blah.("toggle");
