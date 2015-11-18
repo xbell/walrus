@@ -5,8 +5,8 @@
     <h1>Menu for <%=Time.now.strftime("%A, %b %d")%></h1>
     <div class = "center">
 
-      <h3 class = "toggle">**click to hide individual menu items**</h3>
-      <h3 class = "toggle", style ="display: none">**click to show individual menu items**</h3>
+      <h3 class = "toggle">~ CLICK TO HIDE MENU ITEMS ~</h3>
+      <h3 class = "toggle", style ="display: none">~ CLICK TO SHOW MENU ITEMS ~</h3>
 
       <ul>
         <% @sections.each do |section| %>
@@ -27,8 +27,14 @@
             <% end %>
            </ul>
           </div>
-        <%= link_to "Edit Section", edit_path(section) %>
-        <%= link_to "Delete Section", delete_path(section), method: :get, data: { confirm: "Delete entire menu section?" } %>
+          <div class = "buttons">
+            <li>
+              <%= link_to "Edit Section", edit_path(section) %>
+            </li>
+            <li>
+              <%= link_to "Delete Section", delete_path(section), method: :get, data: { confirm: "Delete entire menu section?" } %>
+            </li>
+          </div>
         <% end %>
       </ul>
     </div>
@@ -70,11 +76,11 @@
       </div>
       <div>
         <h4>
-          <label for="description-input">Section Description(optional)</label>
+          <label for="description-input">Section Description (optional)</label>
         </h4>
         <input type="text" id = "description-input" name="section_description" />
       </div>
-      <div>
+      <div class="submit">
         <input type="submit" />
       </div>
     </form>
