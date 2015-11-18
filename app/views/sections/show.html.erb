@@ -8,10 +8,18 @@
         <li>
           <span class= "item"><%=item.name%></span>, <span class = "description"><%=item.description%></span> <span class = "price">(<%=item.price%>)</span> <%=item.note%>
         </li>
-        <%= link_to "Edit Item", edit_item_path(item) %>
-        <%= link_to "Delete Section", delete_item_path(item), method: :get, data: { confirm: "Delete entire menu item?" } %>
+        <div class="buttons">
+          <li>
+            <%= link_to "Edit Item", edit_item_path(item) %>
+          </li>
+          <li>
+            <%= link_to "Delete Section", delete_item_path(item), method: :get, data: { confirm: "Delete entire menu item?" } %>
+          </li>
+        </div>
       <% end %>
     </ul>
+
+
 
     <h4>20% Service Charge**</h4>
     <p class="notes">

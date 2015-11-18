@@ -37,7 +37,6 @@ class MenuItemController < ApplicationController
     @item = MenuItem.find(params[:id])
     id = @item.menu_section_id
     @item.destroy
-    @item.save
       redirect_to section_path(id)
   end
 

@@ -32,7 +32,7 @@ class SectionsController < ApplicationController
     @section.name = params[:section_name].upcase
     @section.description = params[:section_description]
     if @section.save
-      redirect_to section_path(@section)
+      redirect_to "/"
     else
       render "/sections/edit"
     end
@@ -47,6 +47,5 @@ class SectionsController < ApplicationController
     @section.destroy
     redirect_to "/sections"
   end
-
 
 end

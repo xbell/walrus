@@ -29,17 +29,18 @@
           </div>
           <div class = "buttons">
             <li>
-              <%= link_to "Edit Section", edit_path(section) %>
+              <form action="/sections/edit/<%=section.id %>" method="POST">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+                <input type="hidden" name="_method" value="GET" />
+                <input type="submit" value="Edit Section" />
+              </form>
             </li>
             <li>
               <form action="sections/<%=section.id %>" method="POST">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
                 <input type="hidden" name="_method" value="DELETE" />
-                <input type="submit" value="Delete Section" />
+                <input type="submit" value="Delete Section" data-confirm="Delete the entire menu section?" />
               </form>
-
-
-              <!-- <%= link_to "Delete Section", delete_path(section), method: :get, data: { confirm: "Delete entire menu section?" } %> -->
             </li>
           </div>
         <% end %>
