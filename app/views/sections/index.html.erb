@@ -5,8 +5,8 @@
     <h1>Menu for <%=Time.now.strftime("%A, %b %d")%></h1>
     <div class = "center">
 
-      <h3 class = "toggle">~ CLICK TO HIDE MENU ITEMS ~</h3>
-      <h3 class = "toggle", style ="display: none">~ CLICK TO SHOW MENU ITEMS ~</h3>
+      <li><h3 class = "toggle">~ CLICK TO HIDE MENU ITEMS ~</h3></li>
+      <li><h3 class = "toggle", style ="display: none">~ CLICK TO SHOW MENU ITEMS ~</h3></li>
 
       <ul>
         <% @sections.each do |section| %>
