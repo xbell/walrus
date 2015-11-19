@@ -36,7 +36,7 @@
               </form>
             </li>
             <li>
-              <form action="sections/<%=section.id %>" method="POST">
+              <form action="/sections/<%=section.id %>" method="POST">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
                 <input type="hidden" name="_method" value="DELETE" />
                 <input type="submit" value="Delete Section" data-confirm="Delete the entire menu section?" />

@@ -10,10 +10,22 @@
         </li>
         <div class="buttons">
           <li>
-            <%= link_to "Edit Item", edit_item_path(item) %>
+            <form action="/menu-items/edit/<%=item.id %>" method="POST">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+              <input type="hidden" name="_method" value="GET" />
+              <input type="submit" value="Edit Item" />
+            </form>
+
+            <!-- <%= link_to "Edit Item", edit_item_path(item) %> -->
           </li>
           <li>
-            <%= link_to "Delete Section", delete_item_path(item), method: :get, data: { confirm: "Delete entire menu item?" } %>
+            <form action="/menu-items/<%=item.id %>" method="POST">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+              <input type="hidden" name="_method" value="DELETE" />
+              <input type="submit" value="Delete Item" data-confirm="Delete the menu item?" />
+            </form>
+
+            <!-- <%= link_to "Delete Section", delete_item_path(item), method: :get, data: { confirm: "Delete entire menu item?" } %> -->
           </li>
         </div>
       <% end %>
