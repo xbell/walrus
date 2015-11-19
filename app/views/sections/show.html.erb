@@ -1,7 +1,7 @@
 
 <div class = "menubody">
 
-    <h2><%= @section.name %></h2>
+    <a><h2><%= @section.name %></h2></a>
 
     <ul>
       <% @items.each do |item| %>
@@ -15,8 +15,6 @@
               <input type="hidden" name="_method" value="GET" />
               <input type="submit" value="Edit Item" />
             </form>
-
-            <!-- <%= link_to "Edit Item", edit_item_path(item) %> -->
           </li>
           <li>
             <form action="/menu-items/<%=item.id %>" method="POST">
@@ -24,8 +22,6 @@
               <input type="hidden" name="_method" value="DELETE" />
               <input type="submit" value="Delete Item" data-confirm="Delete the menu item?" />
             </form>
-
-            <!-- <%= link_to "Delete Section", delete_item_path(item), method: :get, data: { confirm: "Delete entire menu item?" } %> -->
           </li>
         </div>
       <% end %>
@@ -93,5 +89,5 @@
   </div>
 
   <div class = "home">
-    <%= link_to "Home", sections_path %>
+    <a><%= link_to "Home", sections_path %></a>
   </div>
