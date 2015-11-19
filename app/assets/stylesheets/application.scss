@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+.links {
+  font-family: 'cupolaromanregular';
+}
+
+.links a:link {
+   color: #000;
+}
+
+.links a:visited {
+   color: #000;
+}
+
+.links a:hover {
+   color: #83bccd;
+}
+
+.links a:active {
+   color: #83bccd;
+}

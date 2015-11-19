@@ -48,13 +48,13 @@
 .toggle {
   text-align: center;
   cursor: pointer;
-  color: #95b9e3;
+  color: #83bccd;
 }
 
 .menubody  {
   height: auto;
   width: 67%;
-  border: 2px solid #95b9e3;
+  border: 2px solid #83bccd;
   margin: 2% 0 0 16%;
 }
 
@@ -62,9 +62,25 @@
   text-align: center;
 }
 
-.menubody h2 {
+h2 {
   text-align: center;
   margin-top: 2%;
+}
+
+.center a:link {
+  color: #000;
+}
+
+.center a:visited {
+  color: #000;
+}
+
+.center a:hover {
+  color: #83bccd;
+}
+
+.center a:active {
+  color: #83bccd;
 }
 
 .menubody ul{
@@ -116,7 +132,7 @@
   width: 255px;
   text-align: center;
   margin: 2% 40% 0 40%;
-  border: 2px dashed #95b9e3;
+  border: 2px dashed #83bccd;
 }
 
 .form .submit {
@@ -132,7 +148,7 @@
 .home a {
   text-decoration: none;
   font-size: 20px;
-  color: #95b9e3;
+  color: #83bccd;
 }
 
 .form h4 {
