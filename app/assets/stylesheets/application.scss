@@ -14,8 +14,13 @@
  *= require_self
  */
 
-.links {
-  font-family: 'cupolaromanregular';
+@font-face {
+  font-family: "CupolaRoman";
+  src: url(CupolaRoman.ttf);
+}
+
+.container a {
+  font-family: "CupolaRoman";
 }
 
 .links a:link {

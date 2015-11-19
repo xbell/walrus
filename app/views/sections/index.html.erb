@@ -11,7 +11,7 @@
       <ul>
         <% @sections.each do |section| %>
         <li>
-          <a><h2 class="blue_hover"><%= link_to section.name, section %></h2></a>
+          <a><h2><%= link_to section.name, section %></h2></a>
         </li>
           <%=section.description %>
 
