@@ -24,11 +24,11 @@
 }
 
 .links a:link {
-   color: #000;
+   color: #020202;
 }
 
 .links a:visited {
-   color: #000;
+   color: #020202;
 }
 
 .links a:hover {
@@ -37,4 +37,8 @@
 
 .links a:active {
    color: #83bccd;
+}
+
+.header p {
+  font-family: "Courier New";
 }
