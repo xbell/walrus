@@ -2,15 +2,31 @@ Rails.application.routes.draw do
 
   get "/sections/:id", to: "sections#show", as: :section
   get "/sections", to: "sections#index", as: :sections
+  get "/drinks/:id", to: "drink_sections#show", as: :drink
+  get "/drinks", to: "drink_sections#index", as: :drinks
   get "/", to: "sections#index"
+
   post "/sections", to: "sections#create"
   post "/sections/:id", to: "menu_item#create"
+  post "/drinks", to: "drink_sections#create"
+  post "/drinks/:id", to: "drink_item#create"
+
   get "/sections/edit/:id", to: "sections#edit", as: :edit
   post "/sections/edit/:id", to: "sections#update"
   delete "/sections/:id", to: "sections#delete", as: :delete
+
   get "/menu-items/edit/:id", to: "menu_item#edit", as: :edit_item
   post "/menu-items/edit/:id", to: "menu_item#update"
   delete "/menu-items/:id", to: "menu_item#delete", as: :delete_item
+
+  get "/drinks/edit/:id", to: "drink_sections#edit", as: :edit_drink_section
+  post "/drinks/edit/:id", to: "drink_sections#update"
+  delete "/drinks/:id", to: "drink_sections#delete", as: :delete_drink_section
+
+  get "/drink-items/edit/:id", to: "drink_item#edit", as: :edit_drink_item
+  post "/drink-items/edit/:id", to: "drink_item#update"
+  delete "/drink-items/:id", to: "drink_item#delete", as: :delete_drink_item
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

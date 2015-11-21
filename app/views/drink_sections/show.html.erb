@@ -1,26 +1,27 @@
-
 <div class = "menubody">
 
-    <a><h2><%= @section.name %></h2></a>
+    <a><h2><%= @drink.name %></h2></a>
 
     <ul>
-      <% @items.each do |item| %>
+      <% @drink_items.each do |drink_item| %>
         <li>
-          <span class= "item"><%=item.name%></span>, <span class = "description"><%=item.description%></span> <span class = "price">(<%=item.price%>)</span> <%=item.note%>
+          <span class="item"><%=drink_item.name%></span>, <span class="description"><%=drink_item.description%></span>,
+          <span class="region"><%=drink_item.region%></span>, <span class="pricing">(<%=drink_item.pricing%>)</span>
         </li>
+
         <div class="buttons">
           <li>
-            <form action="/menu-items/edit/<%=item.id %>" method="POST">
+            <form action="/drink-items/edit/<%=drink_item.id %>" method="POST">
               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
               <input type="hidden" name="_method" value="GET" />
-              <input type="submit" value="Edit Item" />
+              <input type="submit" value="Edit Drink Item" />
             </form>
           </li>
           <li>
-            <form action="/menu-items/<%=item.id %>" method="POST">
+            <form action="/drink-items/<%=drink_item.id %>" method="POST">
               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
               <input type="hidden" name="_method" value="DELETE" />
-              <input type="submit" value="Delete Item" data-confirm="Delete the menu item?" />
+              <input type="submit" value="Delete Drink Item" data-confirm="Delete the drink item?" />
             </form>
           </li>
         </div>
@@ -41,10 +42,10 @@
 </div>
 
 
-    <% if @item %>
+    <% if @drink_item %>
       <ul class= "popup">
         <h3>ERROR!</h3>
-        <% @item.errors.each do |column, error| %>
+        <% @drink_item.errors.each do |column, error| %>
           <li><%= column %> <%= error %></li>
         <% end %>
         <p class = "errors">X close error messages X</p>
@@ -54,31 +55,31 @@
 
   <div class = "box">
 
-    <form action="/sections/<%=@section.id%>" method="POST">
+    <form action="/drinks/<%=@drink.id%>" method="POST">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
       <div>
         <h4>
-          <label for="name-input">Create A Menu Item</label>
+          <label for="name-input">Create A Drink Item</label>
         </h4>
-        <input type="text" id = "name-input" name="item_name" />
+        <input type="text" id = "name-input" name="drink_item_name" />
       </div>
       <div>
         <h4>
-          <label for="description-input">Item Description</label>
+          <label for="description-input">Description</label>
         </h4>
-        <input type="text" id = "description-input" name="item_description" />
+        <input type="text" id = "description-input" name="drink_item_description" />
       </div>
       <div>
         <h4>
-          <label for="price-input">Price</label>
+          <label for="region-input">Region</label>
         </h4>
-        <input type="text" id = "price-input" name="item_price" />
+        <input type="text" id = "region-input" name="drink_item_region" />
       </div>
       <div>
         <h4>
-          <label for="note-input">Note</label>
+          <label for="pricing-input">Pricing</label>
         </h4>
-        <input type="text" id = "note-input" name="item_note" />
+        <input type="string" id = "pricing-input" name="drink_item_pricing" />
       </div>
       <div class="submit">
         <input type="submit" />

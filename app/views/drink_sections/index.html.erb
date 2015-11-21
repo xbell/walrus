@@ -2,44 +2,46 @@
 
 <div class = "menubody">
 
-    <h1>Food Menu for <%=Time.now.strftime("%A, %b %d")%></h1>
+    <h1>Drinks Menu for <%=Time.now.strftime("%A, %b %d")%></h1>
     <div class = "center">
 
       <h3 class = "toggle">~ CLICK TO HIDE MENU ITEMS ~</h3>
       <h3 class = "toggle", style ="display: none">~ CLICK TO SHOW MENU ITEMS ~</h3>
 
       <ul>
-        <% @sections.each do |section| %>
+        <% @drinks.each do |drink| %>
         <li>
-          <a><h2><%= link_to section.name, section %></h2></a>
+          <a><h2><%= link_to drink.name, drink_path(drink.id) %></h2></a>
         </li>
-          <%=section.description %>
+          <%=drink.description %>
 
 
           <div class = "hide">
            <ul>
-            <% @items.each do |item| %>
-              <% if item.menu_section_id == section.id %>
+            <% @drink_items.each do |drink_item| %>
+              <% if drink_item.drink_section_id == drink.id %>
                 <li>
-                  <span class= "item"><%=item.name%></span>, <span class = "description"><%=item.description%></span> <span class = "price">(<%=item.price%>)</span> <%=item.note%>
+                  <span class="item"><%=drink_item.name%></span>, <span class="description"><%=drink_item.description%></span>,
+                  <span class="region"><%=drink_item.region%></span>, <span class="price">(<%=drink_item.pricing%>)</span>
                 </li>
               <% end %>
             <% end %>
            </ul>
           </div>
+
           <div class = "buttons">
             <li>
-              <form action="/sections/edit/<%=section.id %>" method="POST">
+              <form action="/drinks/edit/<%=drink.id %>" method="POST">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
                 <input type="hidden" name="_method" value="GET" />
-                <input type="submit" value="Edit Section" />
+                <input type="submit" value="Edit Drink Section" />
               </form>
             </li>
             <li>
-              <form action="/sections/<%=section.id %>" method="POST">
+              <form action="/drinks/<%=drink.id %>" method="POST">
                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
                 <input type="hidden" name="_method" value="DELETE" />
-                <input type="submit" value="Delete Section" data-confirm="Delete the entire menu section?" />
+                <input type="submit" value="Delete Drink Section" data-confirm="Delete the entire drink section?" />
               </form>
             </li>
           </div>
@@ -60,9 +62,9 @@
     <h4>Thank you for dining at the Walrus and the Carpenter.</h4>
 </div>
 
-  <% if @section %>
+  <% if @drink %>
     <ul class = "popup">
-      <% @section.errors.each do |column, error| %>
+      <% @drink.errors.each do |column, error| %>
       <h3>ERROR!</h3>
         <li><%= column %> <%= error %></li>
       <% end %>
@@ -74,19 +76,19 @@
 
   <div class = "form">
 
-    <form action="/sections" method="POST">
+    <form action="/drinks" method="POST">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
       <div>
         <h4>
-          <label for="name-input">Create A Menu Section</label>
+          <label for="name-input">Create A Drink Section</label>
         </h4>
-        <input type="text" id = "name-input" name="section_name" />
+        <input type="text" id = "name-input" name="drink_section_name" />
       </div>
       <div>
         <h4>
-          <label for="description-input">Section Description (optional)</label>
+          <label for="description-input">Drink Section Description (optional)</label>
         </h4>
-        <input type="text" id = "description-input" name="section_description" />
+        <input type="text" id = "description-input" name="drink_section_description" />
       </div>
       <div class="submit">
         <input type="submit" />
