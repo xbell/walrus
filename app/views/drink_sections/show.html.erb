@@ -5,8 +5,8 @@
     <ul>
       <% @drink_items.each do |drink_item| %>
         <li>
-          <span class="item"><%=drink_item.name%></span>, <span class="description"><%=drink_item.description%></span>,
-          <span class="region"><%=drink_item.region%></span>, <span class="pricing">(<%=drink_item.pricing%>)</span>
+          <span class="item"><%=drink_item.name%></span>, <span class="description"><%=drink_item.description%></span>
+          <span class="region"><%=drink_item.region%></span> <span class="pricing">(<%=drink_item.pricing%>)</span>
         </li>
 
         <div class="buttons">
@@ -30,12 +30,7 @@
 
     <h4>20% Service Charge**</h4>
     <p class="notes">
-      *Consuming raw, undercooked, or unpasteurized foods may increase your risk of foodborne illness. <br>
-      Menu items may contain nuts and other allergens.
-      Please let us know if you are allergic to anything.
-    </p>
-    <p class ="notes">
-      ** 100% of this charge is paid to employees. 55% of this charge is paid to employees “directly serving the customer”.
+      wine pricing: (glass/pichet/bottle)
     </p>
     <h4>Thank you for dining at the Walrus and the Carpenter.</h4>
 
