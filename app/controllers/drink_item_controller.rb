@@ -12,7 +12,7 @@ class DrinkItemController < ApplicationController
     else
       @drink = DrinkSection.find(params[:id])
       @drink_items = DrinkItem.where(drink_section_id: params[:id])
-      render "drinks/show"
+      render "drink_sections/show"
     end
   end
 

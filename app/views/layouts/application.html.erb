@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Walrus</title>
-  <link href='https://fonts.googleapis.com/css?family=Cantarell:400italic' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Cantarell:400italic' rel='stylesheet' type='text/css'> -->
+  <!-- <link href="CupolaRoman.ttf" rel='stylesheet' type='text/css'> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
@@ -10,28 +11,27 @@
 </head>
 <body>
   <div class= "container">
-    <%= image_tag ("anchor.jpg"), class: "anchor" %>
-      <div class= "header">
-        <%= image_tag ("logo.jpg"), class: "logo" %>
-        <div class= "links">
-          <a>
-            <%= link_to 'Food', sections_path%>
-          </a>
-          <a>
-            <%= link_to 'Drinks', drinks_path%>
-          </a>
-          <a>
-            <%= link_to 'Photos', "http://www.thewalrusbar.com/photos"%>
-          </a>
-          <a>
-            <%= link_to 'About', "http://www.thewalrusbar.com/about"%>
-          </a>
-          <a>
-            <%= link_to 'Contact', "http://www.thewalrusbar.com/contact"%>
-          </a>
-        </div>
-        <p>Open daily, 4pm - 10pm // Oyster Happy Hour, Monday - Thursday, 4pm - 6pm // 4743 Ballard Ave NW Seattle, WA 98107 // (206) 395-9227</p>
+    <div class= "header">
+      <%= image_tag ("logo.jpg"), class: "logo" %>
+      <div class= "links">
+        <a>
+          <%= link_to 'Food', sections_path%>
+        </a>
+        <a>
+          <%= link_to 'Drinks', drinks_path%>
+        </a>
+        <a>
+          <%= link_to 'Photos', "http://www.thewalrusbar.com/photos"%>
+        </a>
+        <a>
+          <%= link_to 'About', "http://www.thewalrusbar.com/about"%>
+        </a>
+        <a>
+          <%= link_to 'Contact', "http://www.thewalrusbar.com/contact"%>
+        </a>
       </div>
+      <p>Open daily, 4pm - 10pm // Oyster Happy Hour, Monday - Thursday, 4pm - 6pm // 4743 Ballard Ave NW Seattle, WA 98107 // (206) 395-9227</p>
+    </div>
   </div>
 
 <%= yield %>
