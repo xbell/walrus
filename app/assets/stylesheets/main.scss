@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "CupolaRoman";
+  src: url(CupolaRoman.ttf);
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.container .anchor {
+  display: inline-block;
+  float: left;
+}
+
+.header {
+  display: inline-block;
+  width: 90%;
+  margin: 0 5% 0 5%;
+}
+
+.header .logo {
+  float: none;
+  width: 28%;
+  padding-left: 36%;
+}
+
+.header .links {
+  display: inline-block;
+  float: right;
+  padding: 50px 0 0 25px;
+}
+
+.header a {
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #020202;
+}
+
+.header p {
+  display: inline-block;
+  font-size: 88%;
+  text-align: center;
+  padding-top: 1%;
+}
+
+.toggle {
+  text-align: center;
+  cursor: pointer;
+  color: #83bccd;
+}
+
+.menubody  {
+  height: auto;
+  width: 67%;
+  border: 2px solid #83bccd;
+  margin: 1% 0 0 16%;
+  text-align: center;
+}
+
+.menubody a {
+  font-family: "CupolaRoman";
+}
+
+.menubody h1 {
+  font-family: "CupolaRoman";
+  text-align: center;
+}
+
+.center h3 {
+  padding: 2%;
+}
+
+.center a {
+  font-family: "CupolaRoman";
+  text-decoration: none;
+}
+
+.center a:link {
+  color: #020202;
+}
+
+.center a:visited {
+  color: #020202;
+}
+
+.center a:hover {
+  color: #83bccd;
+}
+
+.center a:active {
+  color: #83bccd;
+}
+
+.menubody ul{
+  list-style: none;
+  text-align: center;
+  padding: 0 3% 0 3%;
+}
+
+.menubody li{
+  list-style: none;
+  font-family: "Courier New";
+  font-size: 88%;
+}
+
+.menubody .item {
+  font-weight: bolder;
+}
+
+.menubody .description {
+  font-style: italic;
+}
+
+.menubody .price {
+  font-weight: bolder;
+}
+
+.menubody .pricing {
+  font-weight: bolder;
+}
+
+.menubody .center {
+  text-align: center;
+}
+
+.menubody .notes {
+  text-align: center;
+}
+
+.menubody h4 {
+  text-align: center;
+}
+
+.hide li {
+  font-family: "Courier New";
+  font-size: 88%;
+}
+
+.buttons {
+  padding: 2%;
+}
+
+.buttons li {
+  display: inline-block;
+  padding: 0 2% 0 2%;
+  color: #020202;
+}
+
+.box {
+  display: inline-block;
+  width: 22%;
+  text-align: center;
+  margin: 2% 0 0 39%;
+  border: 2px dashed #83bccd;
+  height: auto;
+}
+
+.box .submit {
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.form .submit {
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.form .update {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.home {
+  text-align: center;
+  padding-top: 4%;
+}
+
+.home a {
+  font-family: "CupolaRoman";
+  text-decoration: none;
+  font-size: 20px;
+  color: #83bccd;
+  display: block;
+  padding-bottom: 1%;
+}
+
+.form h4 {
+  padding: 0 3% 0 3%;
+  position: relative;
+}
+
+.popup {
+  display: inline-block;
+  height: auto;
+  width: 11%;
+  border: 2px dashed #83bccd;
+  text-align: center;
+  float: none;
+  padding: 2%;
+  margin: 3% 0 0 42.5%;
+}
+
+.errors {
+  color: rgba(175, 5, 41, 0.76);
+  border: 2px solid #83bccd;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 3%;
+}
+
+.footer img {
+  width: 100%;
+}

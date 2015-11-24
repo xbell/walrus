@@ -1,0 +1,98 @@
+<% require 'time' %>
+
+<div class = "menubody">
+
+    <h1>Drinks Menu for <%=Time.now.strftime("%A, %b %d")%></h1>
+    <div class = "center">
+
+      <h3 class = "toggle">~ CLICK TO HIDE MENU ITEMS ~</h3>
+      <h3 class = "toggle", style ="display: none">~ CLICK TO SHOW MENU ITEMS ~</h3>
+
+      <ul>
+        <% @drinks.each do |drink| %>
+        <li>
+          <a><h2><%= link_to drink.name, drink_path(drink.id) %></h2></a>
+        </li>
+          <%=drink.description %>
+
+
+          <div class = "hide">
+           <ul>
+            <% @drink_items.each do |drink_item| %>
+              <% if drink_item.drink_section_id == drink.id %>
+                <li>
+                  <span class="item"><%=drink_item.name%></span>, <span class="description"><%=drink_item.description%></span>,
+                  <span class="region"><%=drink_item.region%></span> <span class="price">(<%=drink_item.pricing%>)</span>
+                </li>
+              <% end %>
+            <% end %>
+           </ul>
+          </div>
+
+          <div class = "buttons">
+            <li>
+              <form action="/drinks/edit/<%=drink.id %>" method="POST">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+                <input type="hidden" name="_method" value="GET" />
+                <input type="submit" value="Edit Drink Section" />
+              </form>
+            </li>
+            <li>
+              <form action="/drinks/<%=drink.id %>" method="POST">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+                <input type="hidden" name="_method" value="DELETE" />
+                <input type="submit" value="Delete Drink Section" data-confirm="Delete the entire drink section?" />
+              </form>
+            </li>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+
+
+    <h4>20% Service Charge**</h4>
+    <p class ="notes">
+      Please let us know if you are allergic to anything.<br>
+      ** 100% of this charge is paid to employees. 55% of this charge is paid to employees “directly serving the customer”.
+    </p>
+    <h4>Thank you for dining at the Walrus and the Carpenter.</h4>
+</div>
+
+  <% if @drink %>
+    <ul class = "popup">
+      <% @drink.errors.each do |column, error| %>
+      <h3>ERROR!</h3>
+        <li><%= column %> <%= error %></li>
+      <% end %>
+      <p class = "errors">X close error messages X</p>
+    </ul>
+  <% end %>
+
+<div class = "box">
+
+  <div class = "form">
+
+    <form action="/drinks" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+      <div>
+        <h4>
+          <label for="name-input">Create A Drink Section</label>
+        </h4>
+        <input type="text" id = "name-input" name="drink_section_name" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Drink Section Description (optional)</label>
+        </h4>
+        <input type="text" id = "description-input" name="drink_section_description" />
+      </div>
+      <div class="submit">
+        <input type="submit" />
+      </div>
+    </form>
+  </div>
+</div>
+<div class = "home">
+  <a><%= link_to "Food", sections_path %></a>
+  <a><%= link_to "Drinks", drinks_path %></a>
+</div>
