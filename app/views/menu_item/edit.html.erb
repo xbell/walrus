@@ -1,0 +1,51 @@
+<div class = "menubody">
+
+  <h1>Edit <%= @item.name %></h1>
+
+  <% if @item %>
+    <ul>
+      <% @item.errors.each do |column, error| %>
+        <li><%= column %> <%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class = "form">
+
+    <form action="/menu-items/edit/<%=@item.id %>" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+      <div>
+        <h4>
+          <label for="name-input">Edit Menu Item</label>
+        </h4>
+        <input type="text" id = "name-input" name="item_name" value="<%= @item.name %>" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Edit Item Description(optional)</label>
+        </h4>
+        <input type="text" id = "description-input" name="item_description" value="<%= @item.description %>" />
+      </div>
+      <div>
+        <h4>
+          <label for="price-input">Edit Item Price</label>
+        </h4>
+        <input type="text" id = "price-input" name="item_price" value="<%= @item.price %>" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Edit Item Note(optional)</label>
+        </h4>
+        <input type="text" id = "note-input" name="item_note" value="<%= @item.note %>" />
+      </div>
+      <div class="update">
+        <input type="submit" value="Update"/>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class = "home">
+  <a><%= link_to "Food", sections_path %></a>
+  <a><%= link_to "Drinks", drinks_path %></a>
+</div>

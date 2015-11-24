@@ -1,0 +1,51 @@
+<div class = "menubody">
+
+  <h1>Edit <%= @drink_item.name %></h1>
+
+  <% if @drink_item %>
+    <ul>
+      <% @drink_item.errors.each do |column, error| %>
+        <li><%= column %> <%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class = "form">
+
+    <form action="/drink-items/edit/<%=@drink_item.id %>" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+      <div>
+        <h4>
+          <label for="name-input">Edit Drink Item</label>
+        </h4>
+        <input type="text" id = "name-input" name="drink_item_name" value="<%= @drink_item.name %>" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Edit Drink Item Description (optional)</label>
+        </h4>
+        <input type="text" id = "description-input" name="drink_item_description" value="<%= @drink_item.description %>" />
+      </div>
+      <div>
+        <h4>
+          <label for="description-input">Edit Drink Item Region (optional)</label>
+        </h4>
+        <input type="text" id = "region-input" name="drink_item_region" value="<%= @drink_item.region %>" />
+      </div>
+      <div>
+        <h4>
+          <label for="price-input">Edit Drink Item Price</label>
+        </h4>
+        <input type="string" id = "price-input" name="drink_item_pricing" value="<%= @drink_item.pricing %>" />
+      </div>
+      <div class="update">
+        <input type="submit" value="Update"/>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class = "home">
+  <a><%= link_to "Food", sections_path %></a>
+  <a><%= link_to "Drinks", drinks_path %></a>
+</div>
